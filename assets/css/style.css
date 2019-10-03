@@ -29,9 +29,17 @@ h1, h1, h2, h3, h4, h5 {
 }
 
 img {
-    /* max-width: 200px; */
     float: left;
     margin-right: 25px;
+    /* max-width: 200px!important; */
+}
+.clearfix {
+    overflow: auto;
+}
+clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 hr {
@@ -94,10 +102,9 @@ span.navbar-brand {
 }
 
  .navbar {
-    /* width: 100%; */
     background-color: #fff;
     border-bottom: 1.5px solid #cccccc;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .navbar a {
@@ -127,10 +134,11 @@ input {
 /* Styles for About Page */
 
 .about-container {
-    /* width: 60%;
-    height: 600px; */
-    margin-right: 25px auto;
-    padding: 30px!important;
+    /* width: 60%; */
+    overflow: auto;
+    /* margin-right: 25px auto; */
+    margin-bottom: 100px;
+    /* padding: 30px!important; */
     background-color: #ffffff;
 }
 
@@ -139,6 +147,9 @@ input {
 }
 
 /* Contact Page */
+section.container {
+    height: 600px;
+}
 .contact-container {
     width: 60%;
     height: 400px;
@@ -216,8 +227,13 @@ input {
     }
 
     img {
-        max-width: 450px!important;
-        margin: 15px 0 25px 0; 
+        max-width: 100%!important;
+        margin: 15px auto 25px auto; 
+    }
+    img::after {
+        content: "";
+        clear: both;
+        display: table;
     }
     .p-title {
         width: 105%;
